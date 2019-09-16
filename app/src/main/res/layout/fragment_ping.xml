@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/cl_ping"
+    tools:context=".fragment.PingFragment">
+
+    <TextView
+        android:id="@+id/tv_ping"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@android:color/black"
+        android:gravity="center"
+        android:text="PING"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/et_input_ip"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:textSize="16sp"
+        android:textColor="#3C3C3C"
+        android:hint="请输入IP或域名"
+        android:layout_margin="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:imeOptions="actionDone"
+        android:lines="1"
+        android:singleLine="true"
+        android:background="@drawable/edit_box_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_ping"
+        app:layout_constraintEnd_toStartOf="@id/btn_ping"
+        />
+    <Button
+        android:id="@+id/btn_ping"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_green_light"
+        android:text="ping"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_ping"
+        app:layout_constraintStart_toEndOf="@id/et_input_ip"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_cycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_input_ip"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/cl_menu_containter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_input_ip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/ib_menu"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:background="@drawable/menu_bg"
+            android:src="@drawable/ic_dehaze_black_24dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+
+        <TextView
+            android:id="@+id/tv_copy"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:background="@drawable/menu_bg"
+            android:text="复制"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:background="@drawable/menu_bg"
+            android:text="保存"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+        <TextView
+            android:id="@+id/tv_clear"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:background="@drawable/menu_bg"
+            android:text="清除"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <androidx.constraintlayout.widget.Placeholder
+            android:id="@+id/pl_copy_holder"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            app:layout_constraintCircle="@id/ib_menu"
+            app:layout_constraintCircleRadius="130dp"
+            app:layout_constraintCircleAngle="348"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.constraintlayout.widget.Placeholder
+            android:id="@+id/pl_save_holder"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            app:layout_constraintCircle="@id/ib_menu"
+            app:layout_constraintCircleRadius="130dp"
+            app:layout_constraintCircleAngle="316"
+            tools:ignore="MissingConstraints" />
+        <androidx.constraintlayout.widget.Placeholder
+            android:id="@+id/pl_clear_holder"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            app:layout_constraintCircle="@id/ib_menu"
+            app:layout_constraintCircleRadius="130dp"
+            app:layout_constraintCircleAngle="284"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/g_menu_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tv_copy,tv_save,tv_clear"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
